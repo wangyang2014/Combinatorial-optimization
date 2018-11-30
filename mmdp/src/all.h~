@@ -1,0 +1,39 @@
+#ifndef ALL_H_INCLUDED
+#define ALL_H_INCLUDED
+
+/*
+ * ==================================================================
+ *         STANDARD HEADERS
+ * ==================================================================
+ */
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <cmath>
+#include <map>
+#include <set>
+#include <ctime>
+#include <cassert>
+#include <climits>
+#include <cstdlib>
+#include <cstring>
+#include <algorithm>
+
+using namespace std;
+
+void printMatrix(ostream&,int* );
+void saveBestSolutionBetterPerf();
+void saveBestSolutionEqualPerf();
+void resetBestSolution();
+int checkNewBetterSolution();
+void resetIterAndTabu();
+void saveThisSpecificSolution(int* , double );
+double bestMinDistUntilNow();
+int itersNoNewBetter();
+void analyze();
+void nextLevel();
+//*/
+
+#endif

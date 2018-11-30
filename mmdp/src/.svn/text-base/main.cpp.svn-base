@@ -1,0 +1,50 @@
+/* =============================================================================================================================================================
+ *        Project      : MMDP Problem
+ *        Version      : 1.5
+ *        Created      : 2010-2011
+ *        Copyright (c): 2010-2011, Daniel PORUMBEL, daniel.porumbel@univ-artois.fr
+ *        Journal Paper: Daniel Porumbel, Fred Glover and Jin-Kao Hao. A simple and effective algorithm for the MaxMin Diversity Problem. 186(1): 275-293 (2011)   
+ * =============================================================================================================================================================
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice *shall be included* in all copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+
+#include "choices.h"             //Only #define statements to make certain choices, attention: define NDEBUG (for ex.) need to be before std. headers (assert.h)
+#include "stdHeaders.h"          //Function headers, standard includes
+#include "globals.h"             //Global variables
+#include "init.h"                //Routine to initialize variables (dynamic size matrices), to read input files, etc.
+#include "basicRoutines.h"       //generate random ranges, switch ints, etc.
+#include "algo.h"                //routines inmplementing the algorithm from the paper
+#include "bestSolAndTexOutput.h" //routines keeping track of the best solution found so far, so as to write output in LaTeX format
+
+
+int main(int argc, char**argv)
+{
+    init(argc,argv,"mmdp.cfg");
+    cout<<"Starting algorithm on "<<instance<<"with srand="<<srandSeed<<endl;
+    srand(srandSeed);              //srandSeed initialized in init()/readConfigParams()
+    startTimer();
+
+    dropAddAlg();
+
+    finishCheckAndWriteTex();
+    printBestSolution();
+
+    //Attention, use "cerr" for a writting messages in the console. "cout" is writting to a file in the output folder (specified in the command line arguments)
+    cerr<<"Best Solution="<<bestMinDist<<", best known from mmdp.cfg:"<<bestKnown<<" Time used="<<timeCpuPassedMSec()<< endl;
+    cerr<<"   Info: additional linear recalculations/total iterations"<<recomputed<<"/"<<it<<" (generally equivalent to having "<<100*recomputed/(n*it)<<"% quadratic iterations)\n";
+    cerr<<"   Info: lastIterWithNewBestPRecord/it="<<lastIterWithNewBestPRecord<<"/"<<it<<endl;
+
+    return 0;
+}
+
+//You can trace the calling point of print messages with lines below:
+//#define cout cout<<__FILE__<<":"<<__LINE__<<":"
+//#define cerr cerr<<__FILE__<<":"<<__LINE__<<":"
+
+

@@ -1,0 +1,17 @@
+extern class fastSet{
+    private:
+    int * next;
+    int * prev;
+    int first;
+    int last;
+    int size;
+    int empthySet ; 
+public:
+    void reInitialize();
+    int  findLeft(int);
+    void insert(int);
+    void erase(int);
+    int  nextElem(int);
+    int  firstElem();
+}
+;

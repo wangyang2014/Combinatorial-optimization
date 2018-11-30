@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/usvn/svn/Projets_porumbel/!svn/ver/19/trunk/mmdp/program/src
+END
+bestSolAndTexOutput.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/usvn/svn/Projets_porumbel/!svn/ver/170/trunk/mmdp/program/src/bestSolAndTexOutput.cpp
+END
+readConfigFile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/usvn/svn/Projets_porumbel/!svn/ver/19/trunk/mmdp/program/src/readConfigFile.cpp
+END
+init.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/usvn/svn/Projets_porumbel/!svn/ver/172/trunk/mmdp/program/src/init.cpp
+END
+basics.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/usvn/svn/Projets_porumbel/!svn/ver/19/trunk/mmdp/program/src/basics.cpp
+END
+bestSolAndTexOutput.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/usvn/svn/Projets_porumbel/!svn/ver/170/trunk/mmdp/program/src/bestSolAndTexOutput.h
+END
+init.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/usvn/svn/Projets_porumbel/!svn/ver/170/trunk/mmdp/program/src/init.h
+END
+fastSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/usvn/svn/Projets_porumbel/!svn/ver/19/trunk/mmdp/program/src/fastSet.cpp
+END
+basicRoutines.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/usvn/svn/Projets_porumbel/!svn/ver/170/trunk/mmdp/program/src/basicRoutines.cpp
+END
+processBestSol.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/usvn/svn/Projets_porumbel/!svn/ver/19/trunk/mmdp/program/src/processBestSol.cpp
+END
+all.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/usvn/svn/Projets_porumbel/!svn/ver/19/trunk/mmdp/program/src/all.h
+END
+basicRoutines.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/usvn/svn/Projets_porumbel/!svn/ver/170/trunk/mmdp/program/src/basicRoutines.h
+END
+choices.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/usvn/svn/Projets_porumbel/!svn/ver/172/trunk/mmdp/program/src/choices.h
+END
+algo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/usvn/svn/Projets_porumbel/!svn/ver/171/trunk/mmdp/program/src/algo.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/usvn/svn/Projets_porumbel/!svn/ver/172/trunk/mmdp/program/src/main.cpp
+END
+algo.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/usvn/svn/Projets_porumbel/!svn/ver/170/trunk/mmdp/program/src/algo.h
+END
+globals.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/usvn/svn/Projets_porumbel/!svn/ver/170/trunk/mmdp/program/src/globals.h
+END
+stdHeaders.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/usvn/svn/Projets_porumbel/!svn/ver/169/trunk/mmdp/program/src/stdHeaders.h
+END

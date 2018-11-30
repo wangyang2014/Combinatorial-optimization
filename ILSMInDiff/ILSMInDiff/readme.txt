@@ -1,0 +1,3 @@
+Yangming Zhou and Jin-Kao Hao. "An Iterated Local Search Algorithm for the Minimum Differential Dispersion Problem". Knowledge-Based Systems, March 2017. http://dx.doi.org/10.1016/j.knosys.2017.03.028
+
+The source code of our proposed ILSMinDiff algorithm is available in here. Please make sure that the above paper is cited if you use the code in your research. The software is distributed for academic puposes only. If you wish to use this software for commercial applications, please obtain a permission from Yangming Zhou (yangming@info.univ-angers.fr) or Jin-Kao Hao (hao@info.univ-angers.fr).

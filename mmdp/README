@@ -1,0 +1,38 @@
+/* =============================================================================================================================================================
+ *        Project      : MMDP Problem
+ *        Version      : 1.5
+ *        Created      : 2010-2011
+ *        Copyright (c): 2010-2011, Daniel PORUMBEL, daniel.porumbel@univ-artois.fr
+ *        Journal Paper: Daniel Porumbel, Fred Glover and Jin-Kao Hao. A simple and effective algorithm for the MaxMin Diversity Problem. 186(1): 275-293 (2011)   
+ * =============================================================================================================================================================
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice *shall be included* in all copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+
+RUNNING INSTRUCTIONS AND FILES
+
+1. COMPILATION AND EXECUTION:
+The sources files are in the src folder (the main function is in src/main.cpp).
+Compile them by typing:   
+       "make"
+Launch some examples by typing: 
+	"./localRun.sh" - i.e. all input files in subfolders of folder "instances" (provided in the archive) are considered
+
+2. FILE INFORMATION
+src/algo.cpp,h                - the effective code for the local search algorithms
+src/basicRoutines.cpp,h       - code for "casual" basic routines (e.g. generate a random number between A and B giving a random generator from 0 to N)
+src/bestSolAndTexOutput.cpp,h - keeping track of the best solution found so far, writting procedure (including LaTeX formats)
+src/init.cpp,h                - reading input, memory allocation 
+src/fastSet.cpp,h             - a new faster implementation of STD set
+src/choices.h                 - defines directives for various choices (e.g., the starting point, enabling/disabling the above fast set class) 
+src/globals.h                 - global variables
+src/stdHeaders.h              - the standard headers (iostream, etc)
+src/main.cpp                  - the main file calling routines from all others
+
+"output" folder               - all the source code of all experiments and their results, sorted by date
+

@@ -1,0 +1,56 @@
+std::map<string,string> configs;
+void readConfigFile(char* configFile){
+    ifstream fConf(configFile);
+    if(!fConf.is_open()) cerr<<"I cannot open the configuration file: "<<configFile<<endl;
+    assert(fConf.is_open());
+    string currentLine;
+    while(!fConf.eof()){
+        getline(fConf,currentLine);
+        stringstream ss(currentLine);
+        string word, wordLast, currentKey = "", currentVal = "";
+        if(ss >> word)
+            currentKey = currentKey + word;
+        else
+            continue;//Empthy line
+        if(ss>>word)
+            wordLast=word;
+        else{
+                cerr<<"Warning: ignoring "<<currentKey<<"no value for it"<<endl;
+                continue;
+        }
+        while ( ss >> word ){
+            currentKey=currentKey+" "+wordLast;
+            wordLast = word;
+        }
+        currentVal = wordLast;
+        if(configs.find(currentKey)!=configs.end())
+            cerr<<"Warning, the config file has two values for (I take the last): "<<currentKey<<endl;
+        configs[currentKey]=currentVal;
+    }
+
+    fConf.close();
+}
+
+
+template <class myType>
+int getVarFromConfigTable(string myKey, myType& variable){
+    map<string,string>::iterator it;
+    it = configs.find(myKey);
+    if(it==configs.end()){
+        cout<<"Attention: NO value for "<<myKey<<" in the configuration file. The default value is "<<variable<<endl;
+        return 0;
+    }
+    stringstream ss(it->second);
+    ss>>variable;
+    return 1;
+}
+//This function supposes that the configs map is initialized (e.g. with readConfigFile())
+void readConfigParams(){
+    timeMax = 0;
+    getVarFromConfigTable<long>("timeMax",timeMax);
+    getVarFromConfigTable<double>(instance,bestKnown);
+    getVarFromConfigTable<double>("epsilon",epsilon);
+    getVarFromConfigTable<int>("srandSeed",srandSeed);
+    getVarFromConfigTable<int>("maxNoGain",maxNoGain);
+    getVarFromConfigTable<int>("maxIter",maxIter);
+}

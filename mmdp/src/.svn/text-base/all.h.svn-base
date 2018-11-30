@@ -1,0 +1,14 @@
+void printMatrix(ostream&,int* );
+void saveBestSolutionBetterPerf();
+void saveBestSolutionEqualPerf();
+void resetBestSolution();
+int checkNewBetterSolution();
+void resetIterAndTabu();
+int checkMMDP(int*,double);
+int checkMDP(int*,double&);
+void saveThisSpecificSolution(int* , double );
+double bestMinDistUntilNow();
+int itersNoNewBetter();
+class fastSet;
+void analyze();
+void nextLevel();
